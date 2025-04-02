@@ -23,7 +23,7 @@
                     <td>{{ $article->description }}</td>
                     <td>
                         <a href="{{ route('article.show', $article->id) }}" class="btn btn-info btn-sm">Voir</a>
-                        <a href="#" class="btn btn-warning btn-sm">Modifier</a>
+                        <a href="{{route('article.edit', $article->id)}}" class="btn btn-warning btn-sm">Modifier</a>
                         <form action="{{route('article.destroy', $article->id)}}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
