@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('article.index') }}">Laravel Blog</a>
+        <a class="navbar-brand" href="#">Laravel Blog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,8 +10,11 @@
                     <a class="nav-link" href="{{ route('article.index') }}">Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.create') }}">Créer un article</a>
+                    <a class="nav-link" href="{{ route('category.index') }}">Categories</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('comments.index') }}">Comments</a>
+                </li> 
             </ul>
         </div>
     </div>
