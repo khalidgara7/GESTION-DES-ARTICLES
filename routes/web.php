@@ -45,4 +45,6 @@ Route::prefix('category')
     Route::get('articles/{id}/comments', [CommentController::class, 'index'])->name('comments.index');
 
 Route::post('/articles/{id}/comments', [CommentController::class, 'store'])->name('comments.store');
-Route::post('/comments/delete/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
+//Route::post('/comments/delete/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
+Route::delete('/comments/delete/{article_Id}/{comment_Id}', [CommentController::class, 'destroy'])->name('comments.destroy');
+
