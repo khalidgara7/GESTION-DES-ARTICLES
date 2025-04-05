@@ -12,9 +12,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('category.index') }}">Categories</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('comments.index', ['id' => $article->id]) }}">Comments</a>
-                </li> 
+                @yield('navbar-links')
             </ul>
         </div>
     </div>
