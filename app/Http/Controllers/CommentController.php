@@ -8,6 +8,13 @@ use App\Models\Article;
 
 class CommentController extends Controller
 {
+public function index($article_Id)
+    {
+        return response()->json([
+            'comments' => Article::findOrFail($article_Id)->comments
+        ]);
+    }
+
     public function store(Request $request, $article_Id)
     {
         $request->validate([
